@@ -20,7 +20,7 @@ var errReadingInput = errors.New("Error reading input")
 func main() {
 
 	if len(os.Args) != 2 {
-		printError(errReadingInput)
+		printError(errInvalidArguments)
 	}
 
 	originUnit = strings.ToUpper(os.Args[1])
