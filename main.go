@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"strings"
 )
 
 var originUnit string
@@ -27,6 +28,12 @@ func main() {
 			fmt.Println("Good bye!")
 			break
 		}
+
+		if len(os.Args) != 2 {
+			printError(errReadingInput)
+		}
+
+		originUnit = strings.ToUpper(os.Args[1])
 	}
 }
 
